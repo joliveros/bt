@@ -53,10 +53,7 @@ setup(
     description='A flexible backtesting framework for Python',
     keywords='python finance quant backtesting strategies',
     url='https://github.com/pmorissette/bt',
-    install_requires=[
-        'ffn',
-        'pyprind>=2.10'
-    ],
+    install_requires=get_reqs_from_file('requirements.txt'),
     packages=['bt'],
     long_description=local_file('README.rst').read(),
     classifiers=[
