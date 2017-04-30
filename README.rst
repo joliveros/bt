@@ -2,6 +2,8 @@
 
 bt - Flexible Backtesting for Python
 ====================================
+.. image:: https://img.shields.io/docker/build/codequants/bt.svg
+    :target: https://github.com/joliveros/bt
 
 bt is currently in alpha stage - if you find a bug, please submit an issue.
 
@@ -11,16 +13,16 @@ What is bt?
 -----------
 
 **bt** is a flexible backtesting framework for Python used to test quantitative
-trading strategies. **Backtesting** is the process of testing a strategy over a given 
-data set. This framework allows you to easily create strategies that mix and match 
-different `Algos <http://pmorissette.github.io/bt/bt.html#bt.core.Algo>`_. It aims to foster the creation of easily testable, re-usable and 
-flexible blocks of strategy logic to facilitate the rapid development of complex 
-trading strategies. 
+trading strategies. **Backtesting** is the process of testing a strategy over a given
+data set. This framework allows you to easily create strategies that mix and match
+different `Algos <http://pmorissette.github.io/bt/bt.html#bt.core.Algo>`_. It aims to foster the creation of easily testable, re-usable and
+flexible blocks of strategy logic to facilitate the rapid development of complex
+trading strategies.
 
-The goal: to save **quants** from re-inventing the wheel and let them focus on the 
+The goal: to save **quants** from re-inventing the wheel and let them focus on the
 important part of the job - strategy development.
 
-**bt** is coded in **Python** and joins a vibrant and rich ecosystem for data analysis. 
+**bt** is coded in **Python** and joins a vibrant and rich ecosystem for data analysis.
 Numerous libraries exist for machine learning, signal processing and statistics and can be leveraged to avoid
 re-inventing the wheel - something that happens all too often when using other
 languages that don't have the same wealth of high-quality, open-source projects.
@@ -31,11 +33,11 @@ Features
 ---------
 
 * **Tree Structure**
-    `The tree structure <http://pmorissette.github.io/bt/tree.html>`_ facilitates the construction and composition of complex algorithmic trading 
+    `The tree structure <http://pmorissette.github.io/bt/tree.html>`_ facilitates the construction and composition of complex algorithmic trading
     strategies that are modular and re-usable. Furthermore, each tree `Node
     <http://pmorissette.github.io/bt/bt.html#bt.core.Node>`_
     has its own price index that can be
-    used by Algos to determine a Node's allocation. 
+    used by Algos to determine a Node's allocation.
 
 * **Algorithm Stacks**
     `Algos <http://pmorissette.github.io/bt/bt.html#bt.core.Algo>`_ and `AlgoStacks <http://pmorissette.github.io/bt/bt.html#bt.core.AlgoStack>`_ are
@@ -45,7 +47,7 @@ Features
 
 * **Charting and Reporting**
     bt also provides many useful charting functions that help visualize backtest
-    results. We also plan to add more charts, tables and report formats in the future, 
+    results. We also plan to add more charts, tables and report formats in the future,
     such as automatically generated PDF reports.
 
 * **Detailed Statistics**
@@ -81,12 +83,12 @@ using ``pip`` or ``easy_insatll``:
 
 .. code-block:: bash
 
-    $ pip install bt 
+    $ pip install bt
 
 Since bt has many dependencies, we strongly recommend installing the `Anaconda Scientific Python
-Distribution <https://store.continuum.io/cshop/anaconda/>`_, especially on Windows. This distribution 
-comes with many of the required packages pre-installed, including pip. Once Anaconda is installed, the above 
-command should complete the installation. 
+Distribution <https://store.continuum.io/cshop/anaconda/>`_, especially on Windows. This distribution
+comes with many of the required packages pre-installed, including pip. Once Anaconda is installed, the above
+command should complete the installation.
 
 bt should be compatible with Python 2.7 and Python 3 thanks to the contributions
 made by fellow users.
@@ -112,7 +114,7 @@ Special Thanks
 
 A special thanks to the following contributors for their involvement with the project:
 
-* Vladimir Filimonov `@vfilimonov <https://github.com/vfilimonov>`_ 
+* Vladimir Filimonov `@vfilimonov <https://github.com/vfilimonov>`_
 
 
 License

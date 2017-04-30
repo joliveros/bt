@@ -1,8 +1,21 @@
-from distutils.core import setup
-from distutils.extension import Extension
+from setuptools import find_packages, setup, Extension
 import codecs
 import os
 import re
+from pip.req import parse_requirements
+from pip.download import PipSession
+from os.path import realpath
+
+
+def get_reqs_from_file(file):
+    file_path = realpath(file)
+
+    # parse_requirements() returns generator of pip.req.InstallRequirement objects
+    install_reqs = parse_requirements(file_path, session=PipSession)
+
+    # reqs is a list of requirement
+    # e.g. ['django==1.5.1', 'mezzanine==1.4.6']
+    return [str(ir.req) for ir in install_reqs]
 
 
 def local_file(filename):
@@ -40,10 +53,7 @@ setup(
     description='A flexible backtesting framework for Python',
     keywords='python finance quant backtesting strategies',
     url='https://github.com/pmorissette/bt',
-    install_requires=[
-        'ffn',
-        'pyprind>=2.10'
-    ],
+    install_requires=get_reqs_from_file('requirements.txt'),
     packages=['bt'],
     long_description=local_file('README.rst').read(),
     classifiers=[
